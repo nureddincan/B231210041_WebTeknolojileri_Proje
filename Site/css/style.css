@@ -103,3 +103,18 @@ footer p {
     color: orange; /* Üzerine gelince rengi değişsin */
     transition: color 0.3s ease; /* Geçiş efekti için */
 }   
+
+.profil-fotografı {
+    width: 100%;
+    max-width: 650px; /* 650px'e kadar büyüyebilir ama %100 küçük kalır */
+    height: auto; /* Yüksekliği orantılı ayarla */
+    object-fit: cover;
+}
+
+section {
+    overflow-x: hidden;
+}
+
+.hakkimda table tr td a{
+    text-decoration: none; /* Alt çizgiyi kaldırmak için */
+}
