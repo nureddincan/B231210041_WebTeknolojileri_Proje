@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkımda</title>
+    <title>Öz Geçmiş</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
@@ -14,8 +14,8 @@
         <a href="#" class="logo">Nureddin Can <span>ERDEĞER</span></a>
         <nav>
             <ul>
-                <li><a href="hakkinda.html" class="active"><i class="fas fa-user"></i><span>Hakkımda</span></a></li>
-                <li><a href="ozgecmis.html"><i class="fas fa-address-card"></i><span>Öz Geçmiş</span></a></li>
+                <li><a href="hakkinda.html"><i class="fas fa-user"></i><span>Hakkımda</span></a></li>
+                <li><a href="ozgecmis.html" class="active"><i class="fas fa-address-card"></i><span>Öz Geçmiş</span></a></li>
                 <li><a href="sehrim.html"><i class="fas fa-city"></i><span>Şehrim</span></a></li>
                 <li><a href="mirasimiz.html"><i class="fa-brands fa-fort-awesome"></i><span>Mirasımız</span></a></li>
                 <li><a href="ilgi_alanlarim.html"><i class="fas fa-icons"></i><span>İlgi Alanlarım</span></a></li>
@@ -25,67 +25,113 @@
         </nav>
     </header>
 
-    <section>
-        <div class="row bg-secondary text-white text-center p-5 fs-3">
-            <div class="col-lg-6 col-md-12">
-                <img src="img/biyometrik.jpg" alt="Profil Fotoğrafı" class="rounded-circle img-fluid profil-fotografı">
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <h1 class="text-warning">Merhaba, Ben Nureddin Can!</h1>
-                <p>Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde öğrenim görmekteyim. 20 yaşındayım ve doğma büyüme Antalyalıyım. Lise eğitimimi Aksu Fen Lisesi'nde tamamladıktan sonra, çocukluk hayalim olan bilgisayar mühendisliği alanında ilerlemek için üniversite yolculuğuma başladım. Küçük yaşlardan beri teknolojiye ve bilgisayarlara büyük bir ilgi duyuyorum. Bu hedef doğrultusunda çalışarak, Yükseköğretim Kurumları Sınavı'nda (YKS) Sayısal puan türünde 33.799 sıralama elde ettim. Sakarya Üniversitesi'nde hazırlık sınıfını başarıyla geçerek eğitimime sağlam bir başlangıç yaptım. Şu anda kendimi hem akademik anlamda hem de kişisel gelişimim açısından ileriye taşımaya devam ediyorum.</p>
-            </div>
-        </div>
-        
-        <div class="row bg-dark text-white text-center p-5 fs-5">
-            <div class="col-lg-12"> 
-                <h1 class="text-warning">Hobilerim</h1>
-                <p>Kitap okumak, müzik dinlemek, film ve dizi izlemek, video oyunları oynamak, yürümek ve yeni yerler keşfetmek benim için sadece eğlenceli aktiviteler değil, aynı zamanda ruhumu dinlendiren ve bana ilham veren uğraşlardır. Sanata olan ilgim, hem görsel hem de işitsel açıdan oldukça derindir. Müzik benim için çok önemli; gitar çalarak bu tutkumu daha da derinleştiriyorum. Ayrıca müzelere gitmeyi, farklı kültürleri ve sanat eserlerini keşfetmeyi çok seviyorum. Bu hobiler, bana hem rahatlama hem de yeni şeyler öğrenme fırsatları sunuyor. <a href="https://www.youtube.com/@nureddincan07/videos" target="_blank" class="text-warning">Buradan</a> youtube kanalımdaki grubumla beraber verdiğimiz konserlere ait birkaç videoyu ve gitar cover videolarımı izleyebilirsiniz.</p>
-            </div>
-        </div>
+    <main class="ozgecmis">
 
-        <div class="row bg-dark justify-content-center pb-5">
-            <div class="col-10 col-md-8 col-lg-6">
-                <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/hakkimda_1.jpg" class="d-block w-100" alt="Valorant turnuvası 3.lük ödülü fotoğrafı">
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>SAÜ Valorant Turnuvası</h5>
-                        <p>Valorant takımımla 3.lük kupasıyla beraber bir fotoğraf.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/hakkimda_2.png" class="d-block w-100" alt="Payas konseri">
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>Aksu Fen Lisesi Mezuniyet Konseri</h5>
-                        <p>Lise müzik grubum "Payas" ile verdiğimiz bir konserden fotoğraf.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/hakkimda_3.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>Youtube Müzik Kanalım</h5>
-                        <p>Gitar videoma ait bir fotoğraf.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
+        <section class="hakkimda bg-dark text-center p-5 fs-4">
+                <h1 class="text-warning">~ Hakkımda ~</h1>
+                <div class="table-responsive ">
+                    <table class="table table-white table-hover align-middle">
+                        <tr>
+                            <th>Ad Soyad</th>
+                            <td>Nureddin Can ERDEĞER</td>
+                            <th>Memleket</th>
+                            <td>Antalya</td>
+                            <th>Medeni Hali</th>
+                            <td>Bekar</td>
+                        </tr>
+                        <tr>
+                            <th>Doğum Tarihi</th>
+                            <td>13.08.2004</td>
+                            <th>Doğum Yeri</th>
+                            <td>Antalya</td>
+                            <th>Cinsiyet</th>
+                            <td>Erkek</td>
+                        </tr>
+                        <tr>
+                            <th>Telefon</th>
+                            <td><a href="tel:+901234567890">+90 123 456 7890</a></td>
+                            <th>Üniversite</th>
+                            <td>Sakarya Üniversitesi</td>
+                            <th>Bölüm</th>
+                            <td>Bilgisayar Mühendisliği</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><a href="mailto:nureddin.erdeger@ogr.sakarya.edu.tr">nureddin.erdeger@ogr.sakarya.edu.tr</a></td>
+                            <th>Diller</th>
+                            <td>Türkçe, İngilizce</td>
+                            <th>Ehliyet</th>
+                            <td>B sınıfı</td>
+                        </tr>    
+                    </table>
+                </div>
+        </section>
+
+        <section class="becerilerim bg-dark text-center text-white p-5">
+            <h1 class="text-warning">~ Becerilerim ~</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <figure class="border border-warning p-3">
+                        <img src="images/c++.png" class="w-50" alt="C++ Programlama Dili Logosu">
+                        <figcaption class="py-3 fs-2">C++</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="border border-warning p-3">
+                        <img src="images/csharp.png" class="w-50" alt="C# Programlama Dili Logosu">
+                        <figcaption class="py-3 fs-2">C#</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="border border-warning p-3">
+                        <img src="images/html5.png" class="w-50" alt="HTML5 Web İşaretleme Dili Logosu">
+                        <figcaption class="py-3 fs-2">HTML5</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="border border-warning p-3">
+                        <img src="images/css3.png" class="w-50" alt="CSS3 Logosu">
+                        <figcaption class="py-3 fs-2">CSS3</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="border border-warning p-3">
+                        <img src="images/php.png" class="w-50" alt="PHP Programlama Dili Logosu">,
+                        <figcaption class="py-3 fs-2">PHP</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="border border-warning p-3">
+                        <img src="images/js.png" class="w-50" alt="JavaScript Programlama Dili Logosu">
+                        <figcaption class="py-3 fs-2">JavaScript</figcaption>
+                    </figure>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <section class="egitim_bilgilerim bg-dark text-center text-white p-5 fs-4">
+            <h1 class="text-warning ">~ Eğitim Bilgilerim ~</h1>
+            <table class="table table-white table-hover align-middle">
+                <tr>
+                    <td><i class="fa-solid fa-graduation-cap"></i></td>
+                    <td>Sakarya Üniversitesi Bilgisayar Mühendisliği (2023 - Devam Ediyor)</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-graduation-cap"></i></td>
+                    <td>Antalya Aksu Fen Lisesi (2019 - 2023)</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-graduation-cap"></i></td>
+                    <td>Antalya Kazım Şanöz Ortaokulu (2015 - 2019)</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-graduation-cap"></i></td>
+                    <td>Antalya Mevlana İlkokulu (2011 - 2015)</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
 
     <footer>
         <p> &copy; 2025 Nureddin Can ERDEĞER. Tüm Hakları Saklıdır.</p>
