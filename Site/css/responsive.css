@@ -1,0 +1,85 @@
+/* Header ve Footer için responsive stil ayarları */
+
+/* 768px ve daha küçük ekranlar için responsive stil */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Menü elemanlarını dikey sıraya yerleştir */
+        align-items: center; /* Logo ve menüyü ortala */
+        padding: 10px 20px; /* Dikeyde boşluk bırak */
+        width: 100%; /* Header genişliği %100 */
+    }
+
+    .logo {
+        display: inline-block; /* Logo blok olarak gösterilmez, satır içinde kalır */
+    }
+
+    nav {
+        width: 100%; /* Menü genişliği %100 */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü öğelerini dikey yerleştir */
+        width: 100%; /* Menü genişliği %100 */
+        padding: 0; /* Padding'i sıfırla */
+        margin: 0; /* Margin'i sıfırla */
+        overflow-x: hidden; /* Menü taşmasını engelle */
+    }
+
+    nav ul li {
+        width: 100%; /* Her bir menü öğesinin genişliği %100 olacak */
+    }
+
+    nav ul li a {
+        width: 100%; /* Linklerin genişliği %100 */
+        padding: 10px 0; /* Yatayda boşluk bırak */
+        text-align: center; /* Link metnini ortala */
+        display: block; /* Linki blok eleman yap */
+    }
+
+    footer {
+        flex-direction: column; /* Footer elemanlarını dikey sıraya koy */
+        align-items: center; /* Footer'da her şeyi ortala */
+        padding: 20px 0; /* Dikeyde padding bırak */
+    }
+}
+
+/* 768px ile 1199px arasında ekran boyutları için stil */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        padding: 10px 20px; /* Header'a biraz iç boşluk ekle */
+        flex-wrap: wrap; /* Menü taşarsa alt satıra geçsin */
+    }
+
+    .logo {
+        display: inline-block; /* Logo satır içinde kalacak */
+    }
+
+    nav {
+        width: auto; /* Menü genişliği otomatik olacak */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Menü taşarsa alta geçsin */
+        justify-content: center; /* Menü öğelerini ortala */
+        gap: 15px; /* Aralarındaki boşluğu artır */
+    }
+
+    nav ul li a {
+        padding: 8px 12px; /* Menü butonlarının boyutlarını küçült */
+        font-size: 16px; /* Menü yazı boyutunu küçült */
+    }
+
+    .logo {
+        font-size: 24px; /* Logo yazı boyutunu hafifçe büyüt */
+    }
+
+    footer {
+        flex-direction: column; /* Footer'ı dikey hizaya getir */
+        padding: 20px; /* Footer'a biraz padding ekle */
+    }
+
+    .social-icons a {
+        font-size: 28px; /* Sosyal ikonların boyutunu büyüt */
+        margin: 0 15px; /* Aralarındaki boşluğu artır */
+    }
+}
