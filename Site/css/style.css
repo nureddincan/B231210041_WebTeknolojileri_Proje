@@ -4,6 +4,8 @@
     box-sizing: border-box; /* Kutunun boyutunu ayarlamak için */
 }
 
+/* Header ve Footer için genel stil ayarları */
+
 header {
     background-color: #213448;
     display: flex; /* Flexbox kullanarak yatayda hizalama */
@@ -104,6 +106,8 @@ footer p {
     transition: color 0.3s ease; /* Geçiş efekti için */
 }   
 
+/* Hakkımda sayfası için stil ayarları */
+
 .profil-fotografı {
     width: 100%;
     max-width: 650px; /* 650px'e kadar büyüyebilir ama %100 küçük kalır */
@@ -117,4 +121,25 @@ section {
 
 .hakkimda table tr td a{
     text-decoration: none; /* Alt çizgiyi kaldırmak için */
+}
+
+/* Şehrim sayfası için stil ayarları */
+
+.slider{
+    max-width: 1200px; /* 1200px'e kadar büyüyebilir ama %100 küçük kalır */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.slider img{
+    max-width: 1200px; /* 1200px'e kadar büyüyebilir ama %100 küçük kalır */
+    max-height: 680px; /* 700px'e kadar büyüyebilir ama %100 küçük kalır */
+    object-fit: cover;
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.sehrim-article-img {
+    max-width: 1200px; /* 1200px'e kadar büyüyebilir ama %100 küçük kalır */
+    max-height: 680px; /* 700px'e kadar büyüyebilir ama %100 küçük kalır */
+    object-fit: cover;
+    margin: 0 auto; /* Ortalamak için */
 }
