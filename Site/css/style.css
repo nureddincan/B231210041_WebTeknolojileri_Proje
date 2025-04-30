@@ -137,9 +137,15 @@ section {
     margin: 0 auto; /* Ortalamak için */
 }
 
-.sehrim-article-img {
+.sehrim-article-img{
     max-width: 1200px; /* 1200px'e kadar büyüyebilir ama %100 küçük kalır */
     max-height: 680px; /* 700px'e kadar büyüyebilir ama %100 küçük kalır */
     object-fit: cover;
     margin: 0 auto; /* Ortalamak için */
+}
+
+/* Mirasımız sayfası için stil ayarları */
+
+.container{
+    max-width: 1200px; /* 1200px'e kadar büyüyebilir ama %100 küçük kalır */
 }
