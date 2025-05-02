@@ -52,6 +52,8 @@ nav ul li a {
     color: #fff;
     padding: 10px 20px;
     display: inline-block; /* Elemanları blok olarak göstermek için */
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
@@ -148,4 +150,11 @@ section {
 
 .container{
     max-width: 1200px; /* 1200px'e kadar büyüyebilir ama %100 küçük kalır */
+}
+
+/* Login sayfası için stil ayarları */
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
 }
