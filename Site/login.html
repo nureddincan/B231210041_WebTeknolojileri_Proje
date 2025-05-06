@@ -27,11 +27,13 @@
     </header>
 
     <main class="d-flex justify-content-center align-items-center min-vh-100">
-        <form action="php/login_process.php" method="POST" class="login-form bg-light rounded shadow-lg p-5">
+        <form action="php/login_process.php" method="POST" class="login-form bg-light rounded shadow-lg p-5" onsubmit="return formKontrol()">
             <h1 class="text-center">Giriş Yap</h1>
+            <!-- Hata mesajı kutusu --> 
+            <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
             <div class="mb-3">
                 <label for="username" class="form-label">Kullanıcı Adı</label>
-                <input type="email" class="form-control" id="username" name="username" placeholder="Kullanıcı adı giriniz">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Kullanıcı adı giriniz">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Şifre</label>
@@ -49,6 +51,7 @@
         </div>
     </footer>
 
+    <script src="js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
