@@ -18,7 +18,6 @@ function formKontrol() {
         return false;
     }
 
-    
     hataKutusu.classList.add("d-none"); // Hata yoksa kutuyu gizle
     return true; // form gönderilsin
 }
