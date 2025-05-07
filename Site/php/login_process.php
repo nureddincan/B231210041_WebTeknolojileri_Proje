@@ -1,6 +1,4 @@
 <?php
-// Formdan gelen verileri al
-
 // Eğer POST ile 'username' verisi geldiyse $username değişkenine ata, yoksa boş string ata
 $username = isset($_POST['username']) ? $_POST['username'] : ''; 
 // Eğer POST ile 'password' verisi geldiyse $password değişkenine ata, yoksa boş string ata
