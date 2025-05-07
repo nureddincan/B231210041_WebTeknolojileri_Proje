@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="icon" href="images/envelope-solid.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Nureddin Can <span>ERDEĞER</span></a>
+        <nav>
+            <ul>
+                <li><a href="hakkinda.html"><i class="fas fa-user"></i><span>Hakkımda</span></a></li>
+                <li><a href="ozgecmis.html"><i class="fas fa-address-card"></i><span>Öz Geçmiş</span></a></li>
+                <li><a href="sehrim.html"><i class="fas fa-city"></i><span>Şehrim</span></a></li>
+                <li><a href="mirasimiz.html"><i class="fa-brands fa-fort-awesome"></i><span>Mirasımız</span></a></li>
+                <li><a href="ilgi_alanlarim.html"><i class="fas fa-icons"></i><span>İlgi Alanlarım</span></a></li>
+                <li><a href="iletisim.html" class="active"><i class="fa-solid fa-envelope"></i><span>İletişim</span></a></li>
+                <li><a href="login.html" class="login"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="app">
+        <div class="row bg-light p-5">
+            <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188.93086582639094!2d30.3254550048686!3d40.74236113110344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccaded70ee240b%3A0xd81085b5551312fd!2sBilgisayar%20Ve%20Bili%C5%9Fim%20Bilimleri%20Fak%C3%BCltesi!5e0!3m2!1str!2str!4v1746255282546!5m2!1str!2str" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" class="w-100" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <h1 class="text-center text-warning">Bana Ulaşın</h1>
+                <form action="php/iletisim.php" id="iletisimForm" method="POST" ref="iletisimForm" novalidate>
+                    <div class="mb-3">
+                        <label for="adSoyad" class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-control" id="adSoyad" name="adSoyad" v-model="adSoyad" placeholder="Adınızı ve soyadınızı giriniz">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-Posta</label>
+                        <input type="email" class="form-control" id="email" name="email" v-model="email" placeholder="E-posta adresinizi giriniz">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefon" class="form-label">Telefon</label>
+                        <input type="tel" class="form-control" id="telefon" name="telefon" v-model="telefon" placeholder="Telefon numaranızı giriniz">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cinsiyet</label><br>
+                        <input type="radio" name="cinsiyet" id="erkek" value="Erkek" v-model="cinsiyet"> 
+                        <label for="erkek" class="px-1">Erkek</label>
+                        <input type="radio" name="cinsiyet" id="kadin" value="Kadın" v-model="cinsiyet">
+                        <label for="kadin" class="px-1">Kadın</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="yas" class="form-label">Yaş</label>
+                        <input type="number" class="form-control" id="yas" name="yas" v-model="yas" placeholder="Yaşınızı giriniz">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sehir" class="form-label">Şehir</label>
+                        <select class="form-select" id="sehir" name="sehir" v-model="sehir">
+                            <option value="">Şehir seçiniz</option>
+                            <option value="Adana">Adana</option>
+                            <option value="Adıyaman">Adıyaman</option>
+                            <option value="Afyonkarahisar">Afyonkarahisar</option>
+                            <option value="Ağrı">Ağrı</option>
+                            <option value="Amasya">Amasya</option>
+                            <option value="Ankara">Ankara</option>
+                            <option value="Antalya">Antalya</option>
+                            <option value="Artvin">Artvin</option>
+                            <option value="Aydın">Aydın</option>
+                            <option value="Balıkesir">Balıkesir</option>
+                            <option value="Bilecik">Bilecik</option>
+                            <option value="Bingöl">Bingöl</option>
+                            <option value="Bitlis">Bitlis</option>
+                            <option value="Bolu">Bolu</option>
+                            <option value="Burdur">Burdur</option>
+                            <option value="Bursa">Bursa</option>
+                            <option value="Çanakkale">Çanakkale</option>
+                            <option value="Çankırı">Çankırı</option>
+                            <option value="Çorum">Çorum</option>
+                            <option value="Denizli">Denizli</option>
+                            <option value="Diyarbakır">Diyarbakır</option>
+                            <option value="Edirne">Edirne</option>
+                            <option value="Elazığ">Elazığ</option>
+                            <option value="Erzincan">Erzincan</option>
+                            <option value="Erzurum">Erzurum</option>
+                            <option value="Eskişehir">Eskişehir</option>
+                            <option value="Gaziantep">Gaziantep</option>
+                            <option value="Giresun">Giresun</option>
+                            <option value="Gümüşhane">Gümüşhane</option>
+                            <option value="Hakkâri">Hakkâri</option>
+                            <option value="Hatay">Hatay</option>
+                            <option value="Isparta">Isparta</option>
+                            <option value="Mersin">Mersin</option>
+                            <option value="İstanbul">İstanbul</option>
+                            <option value="İzmir">İzmir</option>
+                            <option value="Kars">Kars</option>
+                            <option value="Kastamonu">Kastamonu</option>
+                            <option value="Kayseri">Kayseri</option>
+                            <option value="Kırklareli">Kırklareli</option>
+                            <option value="Kırşehir">Kırşehir</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                            <option value="Konya">Konya</option>
+                            <option value="Kütahya">Kütahya</option>
+                            <option value="Malatya">Malatya</option>
+                            <option value="Manisa">Manisa</option>
+                            <option value="Kahramanmaraş">Kahramanmaraş</option>
+                            <option value="Mardin">Mardin</option>
+                            <option value="Muğla">Muğla</option>
+                            <option value="Muş">Muş</option>
+                            <option value="Nevşehir">Nevşehir</option>
+                            <option value="Niğde">Niğde</option>
+                            <option value="Ordu">Ordu</option>
+                            <option value="Rize">Rize</option>
+                            <option value="Sakarya">Sakarya</option>
+                            <option value="Samsun">Samsun</option>
+                            <option value="Siirt">Siirt</option>
+                            <option value="Sinop">Sinop</option>
+                            <option value="Sivas">Sivas</option>
+                            <option value="Tekirdağ">Tekirdağ</option>
+                            <option value="Tokat">Tokat</option>
+                            <option value="Trabzon">Trabzon</option>
+                            <option value="Tunceli">Tunceli</option>
+                            <option value="Şanlıurfa">Şanlıurfa</option>
+                            <option value="Uşak">Uşak</option>
+                            <option value="Van">Van</option>
+                            <option value="Yozgat">Yozgat</option>
+                            <option value="Zonguldak">Zonguldak</option>
+                            <option value="Aksaray">Aksaray</option>
+                            <option value="Bayburt">Bayburt</option>
+                            <option value="Karaman">Karaman</option>
+                            <option value="Kırıkkale">Kırıkkale</option>
+                            <option value="Batman">Batman</option>
+                            <option value="Şırnak">Şırnak</option>
+                            <option value="Bartın">Bartın</option>
+                            <option value="Ardahan">Ardahan</option>
+                            <option value="Iğdır">Iğdır</option>
+                            <option value="Yalova">Yalova</option>
+                            <option value="Karabük">Karabük</option>
+                            <option value="Kilis">Kilis</option>
+                            <option value="Osmaniye">Osmaniye</option>
+                            <option value="Düzce">Düzce</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="konu" class="form-label">Konu</label>
+                        <input type="text" class="form-control" id="konu" name="konu" v-model="konu" placeholder="Konuyu giriniz">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mesaj" class="form-label">Mesaj</label>
+                        <textarea class="form-control" id="mesaj" name="mesaj" v-model="mesaj" rows="4" placeholder="Mesajınızı giriniz"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="onay" name="onay" v-model="onay">
+                        <label class="form-check-label" for="onay">Verilerimin işlenmesini kabul ediyorum.</label>
+                    </div>
+                    <button type="button" @click="kontrolEt" class="btn btn-primary">VueJS ile Kontrol Et</button>
+                    <button type="button" onclick="kontrolEt()" class="btn btn-warning mx-1">JS İle Kontrol Et</button>
+                    <button type="submit" id="gonderBtn" class="btn btn-success mx-1" onclick="return gonder()" @click.prevent="formuGonder">Gönder</button>
+                    <button type="reset" class="btn btn-danger mx-1" @click="formuTemizle">Temizle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> &copy; 2025 Nureddin Can ERDEĞER. Tüm Hakları Saklıdır.</p>
+        <div class="social-icons">
+            <a href="https://github.com/nureddincan" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nureddincanerdeger/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/iletisim_vue.js"></script>
+    <script src="js/iletisim.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
