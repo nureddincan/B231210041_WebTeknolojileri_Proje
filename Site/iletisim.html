@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Nureddin Can <span>ERDEĞER</span></a>
+        <a href="#" class="logo">Nureddin Can<span>ERDEĞER</span></a>
         <nav>
             <ul>
                 <li><a href="hakkinda.html"><i class="fas fa-user"></i><span>Hakkımda</span></a></li>
@@ -29,10 +29,10 @@
     <div class="container" id="app">
         <div class="row bg-light p-5">
             <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188.93086582639094!2d30.3254550048686!3d40.74236113110344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccaded70ee240b%3A0xd81085b5551312fd!2sBilgisayar%20Ve%20Bili%C5%9Fim%20Bilimleri%20Fak%C3%BCltesi!5e0!3m2!1str!2str!4v1746255282546!5m2!1str!2str" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" class="w-100" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188.93086582639094!2d30.3254550048686!3d40.74236113110344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccaded70ee240b%3A0xd81085b5551312fd!2sBilgisayar%20Ve%20Bili%C5%9Fim%20Bilimleri%20Fak%C3%BCltesi!5e0!3m2!1str!2str!4v1746255282546!5m2!1str!2str" width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy" class="w-100" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="col-lg-6 col-md-12">
-                <h1 class="text-center text-warning">Bana Ulaşın</h1>
+                <h1 class="text-center">Bana Ulaşın</h1>
                 <form action="php/iletisim.php" id="iletisimForm" method="POST" ref="iletisimForm" novalidate>
                     <div class="mb-3">
                         <label for="adSoyad" class="form-label">Ad Soyad</label>
@@ -156,10 +156,10 @@
                         <input type="checkbox" class="form-check-input" id="onay" name="onay" v-model="onay">
                         <label class="form-check-label" for="onay">Verilerimin işlenmesini kabul ediyorum.</label>
                     </div>
-                    <button type="button" @click="kontrolEt" class="btn btn-primary">VueJS ile Kontrol Et</button>
-                    <button type="button" onclick="kontrolEt()" class="btn btn-warning mx-1">JS İle Kontrol Et</button>
-                    <button type="submit" id="gonderBtn" class="btn btn-success mx-1" onclick="return gonder()" @click.prevent="formuGonder">Gönder</button>
-                    <button type="reset" class="btn btn-danger mx-1" @click="formuTemizle">Temizle</button>
+                    <button type="button" @click="kontrolEt" class="btn btn-primary m-1">VueJS ile Kontrol Et</button>
+                    <button type="button" onclick="kontrolEt()" class="btn btn-warning m-1">JS İle Kontrol Et</button>
+                    <button type="submit" id="gonderBtn" class="btn btn-success m-1" onclick="return gonder()" @click.prevent="formuGonder">Gönder</button>
+                    <button type="reset" class="btn btn-danger m-1" @click="formuTemizle">Temizle</button>
                 </form>
             </div>
         </div>
