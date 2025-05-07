@@ -1,7 +1,7 @@
-const { createApp } = Vue;
+const { createApp } = Vue; // Vue kütüphanesini içe aktarma
 
-createApp({
-    data() {
+createApp({ // Vue uygulaması oluşturma
+    data() { // Uygulama verileri
         return {
             adSoyad: "",
             email: "",
@@ -15,7 +15,7 @@ createApp({
             hatalar: []
         };
     },
-    methods: {
+    methods: { // Uygulama yöntemleri
         kontrolEt() {
             this.hatalar = [];
 
@@ -56,4 +56,4 @@ createApp({
             this.hatalar = [];
         }
     }
-}).mount("#app");
+}).mount("#app"); // Vue uygulamasını #app elementine monte etme
