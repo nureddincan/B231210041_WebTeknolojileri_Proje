@@ -1,7 +1,7 @@
-const { createApp } = Vue; // Vue kütüphanesini içe aktarma
+const { createApp } = Vue;
 
-createApp({ // Vue uygulaması oluşturma
-    data() { // Uygulama verileri
+createApp({
+    data() {
         return {
             adSoyad: "",
             email: "",
@@ -9,41 +9,106 @@ createApp({ // Vue uygulaması oluşturma
             cinsiyet: "",
             yas: "",
             sehir: "",
+            dosya: null,
             konu: "",
             mesaj: "",
             onay: false,
-            hatalar: []
+            hatalar: {
+                adSoyad: "",
+                email: "",
+                telefon: "",
+                cinsiyet: "",
+                yas: "",
+                sehir: "",
+                dosya: "",
+                konu: "",
+                mesaj: "",
+                onay: ""
+            }
         };
     },
-    methods: { // Uygulama yöntemleri
+    methods: {
         kontrolEt() {
-            this.hatalar = [];
+            // Hataları sıfırla
+            Object.keys(this.hatalar).forEach(key => this.hatalar[key] = "");
 
-            if (!this.adSoyad.trim()) this.hatalar.push("Ad Soyad boş olamaz.");
-            if (!this.email || !this.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) this.hatalar.push("Geçerli bir e-posta adresi giriniz.");
-            if (!this.telefon || !this.telefon.match(/^\d+$/)) this.hatalar.push("Telefon sadece rakamlardan oluşmalıdır.");
-            if (!this.cinsiyet) this.hatalar.push("Cinsiyet seçimi zorunludur.");
-            if (!this.yas || this.yas < 1) this.hatalar.push("Yaş geçersiz.");
-            if (!this.sehir) this.hatalar.push("Şehir seçimi yapınız.");
-            if (!this.konu.trim()) this.hatalar.push("Konu boş olamaz.");
-            if (!this.mesaj.trim()) this.hatalar.push("Mesaj alanı boş olamaz.");
-            if (!this.onay) this.hatalar.push("Veri işleme izni vermelisiniz.");
+            // Ad Soyad kontrolü
+            if (!this.adSoyad.trim()) {
+                this.hatalar.adSoyad = "Ad Soyad boş olamaz.";
+            } else if (!/^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/.test(this.adSoyad)) {
+                this.hatalar.adSoyad = "Ad Soyad sadece harflerden oluşmalıdır.";
+            }
 
-            if (this.hatalar.length > 0) {
-                alert("Lütfen aşağıdaki hataları düzeltin:\n\n" + this.hatalar.join("\n"));
-            } else {
-                alert("Form başarıyla kontrol edildi. Gönderebilirsiniz.");
-                formValid = true;
+            // E-posta kontrolü
+            if (!this.email) {
+                this.hatalar.email = "E-posta boş olamaz.";
+            } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(this.email)) {
+                this.hatalar.email = "Geçerli bir e-posta adresi giriniz.";
+            }
+
+            // Telefon kontrolü
+            if (!this.telefon) {
+                this.hatalar.telefon = "Telefon boş olamaz.";
+            } else if (!/^05[0-9]{9}$/.test(this.telefon)) {
+                this.hatalar.telefon = "Telefon numarası 05 ile başlamalı ve 11 haneli olmalıdır.";
+            }
+
+            // Cinsiyet kontrolü
+            if (!this.cinsiyet) {
+                this.hatalar.cinsiyet = "Cinsiyet seçimi zorunludur.";
+            }
+
+            // Yaş kontrolü
+            if (!this.yas) {
+                this.hatalar.yas = "Yaş boş olamaz.";
+            } else if (isNaN(this.yas) || this.yas < 1) {
+                this.hatalar.yas = "Geçerli bir yaş giriniz.";
+            }
+
+            // Şehir kontrolü
+            if (!this.sehir) {
+                this.hatalar.sehir = "Şehir seçimi zorunludur.";
+            }
+
+            // Konu kontrolü
+            if (!this.konu.trim()) {
+                this.hatalar.konu = "Konu boş olamaz.";
+            }
+
+            // Dosya kontrolü
+            if (!this.dosya) {
+                this.hatalar.dosya = "Bir dosya yükleyiniz.";
+            }
+
+            // Mesaj kontrolü
+            if (!this.mesaj.trim()) {
+                this.hatalar.mesaj = "Mesaj alanı boş olamaz.";
+            }
+
+            // Onay kontrolü
+            if (!this.onay) {
+                this.hatalar.onay = "Veri işleme izni vermelisiniz.";
+            }
+
+            // Form geçerli mi kontrol et
+            for (let hata in this.hatalar) {
+                if (this.hatalar[hata] !== "") {
+                    return false; // Herhangi bir hata varsa direkt false döndür
+                }
+            }
+
+            alert("Form başarıyla kontrol edildi. Gönderebilirsiniz.");
+            return true;
+        },
+
+        formuGonder() {
+            if (this.kontrolEt()) {
+                document.getElementById('iletisimForm').submit();
             }
         },
-        formuGonder() {
-            if (!formValid) {
-                alert("Form geçerli değil. Lütfen kontrol edin.");
-                return false; // Gönderme işlemini iptal et
-            }
-            this.$refs.iletisimForm.submit(); // native form gönderimi
-        },        
+
         formuTemizle() {
+            // Tüm form alanlarını sıfırla
             this.adSoyad = "";
             this.email = "";
             this.telefon = "";
@@ -51,9 +116,20 @@ createApp({ // Vue uygulaması oluşturma
             this.yas = "";
             this.sehir = "";
             this.konu = "";
+            this.dosya = null;
             this.mesaj = "";
             this.onay = false;
-            this.hatalar = [];
+            
+            // Hataları sıfırla
+            Object.keys(this.hatalar).forEach(key => this.hatalar[key] = "");
+
+            // Dosya input'unu sıfırla
+            document.getElementById('dosya').value = '';
+        },
+
+        dosyaSecildi(event) {
+            this.dosya = event.target.files[0]; // Seçilen dosyayı al
+            this.hatalar.dosya = ""; // Hata mesajını temizle
         }
     }
-}).mount("#app"); // Vue uygulamasını #app elementine monte etme
+}).mount("#app");
