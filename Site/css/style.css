@@ -38,7 +38,7 @@ header nav ul{
     list-style-type: none; /* Liste işaretlerini kaldırmak için */
     display: flex; /* Flexbox kullanarak yatayda hizalama */
     gap: 10px; /* Elemanlar arasında boşluk bırakmak için */
-    margin: 10px;
+    margin: auto;
     padding: 0; /* Varsayılan padding'i sıfırlamak için */
 }
 
