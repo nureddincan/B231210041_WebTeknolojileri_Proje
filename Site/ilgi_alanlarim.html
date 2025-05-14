@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım</title>
+    <link rel="icon" href="images/icons-solid.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Nureddin Can <span>ERDEĞER</span></a>
+        <nav>
+            <ul>
+                <li><a href="hakkinda.html"><i class="fas fa-user"></i><span>Hakkımda</span></a></li>
+                <li><a href="ozgecmis.html"><i class="fas fa-address-card"></i><span>Öz Geçmiş</span></a></li>
+                <li><a href="sehrim.html"><i class="fas fa-city"></i><span>Şehrim</span></a></li>
+                <li><a href="mirasimiz.html"><i class="fa-brands fa-fort-awesome"></i><span>Mirasımız</span></a></li>
+                <li><a href="ilgi_alanlarim.html" class="active"><i class="fas fa-icons"></i><span>İlgi Alanlarım</span></a></li>
+                <li><a href="iletisim.html"><i class="fa-solid fa-envelope"></i><span>İletişim</span></a></li>
+                <li><a href="login.html" class="login"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mt-5 mb-5">
+        <h1 class="text-center">İlgi Alanlarım</h1>
+        <section class="text-center p-5 fs-5">
+            <p>Genelde her gün, günün yoğunluğu ne olursa olsun, az da olsa film ya da dizi izlemeye zaman ayırırım. 
+            Bu alışkanlık, yıllar içinde sadece bir hobi olmaktan çıktı; artık benim için bir tutkuya dönüştü. 
+            Bugüne kadar yüzlerce yapım izledim ve her biri bana farklı dünyaların kapısını araladı. Özellikle suç, 
+            gerilim, dram ve polisiye türleri benim için vazgeçilmez. Gerçek hayattan esinlenen ya da karmaşık karakter 
+            yapılarını derinlemesine işleyen yapımlar beni fazlasıyla etkiliyor.
+            Favori dizim sorulduğunda ise hiç düşünmeden Breaking Bad derim. Karakter gelişimi, 
+            senaryo yapısı ve atmosferiyle hâlâ beni en çok etkileyen yapım. 
+            Elbette Stranger Things ve The Walking Dead gibi yapımları da keyifle takip ettim ve her birinin bendeki yeri farklı.
+            Bu sayfada, en çok etkilendiğim film ve dizilerden bazılarını sizinle paylaşıyorum. Belki aralarında senin de favorin vardır!</p>
+            <a href="#favori-filmler" class="btn btn-warning mt-3">İlgi Alanlarımı Gör<i class="fas fa-arrow-down ms-2"></i></a>
+        </section>
+
+        <h2 class="text-center mb-4">Favori Filmlerim</h2>
+        <div id="favori-filmler" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Favori filmler buraya gelecek -->
+        </div>
+
+        <h2 class="text-center mt-5 mb-4">Favori Dizilerim</h2>
+        <div id="favori-diziler" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Favori diziler buraya gelecek -->
+        </div>
+
+        <a href="#header" id="backtotop" class="text-warning"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    </main>
+    
+    <footer>
+        <p> &copy; 2025 Nureddin Can ERDEĞER. Tüm Hakları Saklıdır.</p>
+        <div class="social-icons">
+            <a href="https://github.com/nureddincan" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nureddincanerdeger/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+    <script src="js/film-dizi-api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
