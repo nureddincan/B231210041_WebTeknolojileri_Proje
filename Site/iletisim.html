@@ -36,30 +36,52 @@
                 <form action="php/iletisim.php" id="iletisimForm" method="POST" ref="iletisimForm" novalidate>
                     <div class="mb-3">
                         <label for="adSoyad" class="form-label">Ad Soyad</label>
-                        <input type="text" class="form-control" id="adSoyad" name="adSoyad" v-model="adSoyad" placeholder="Adınızı ve soyadınızı giriniz">
+                        <input type="text" class="form-control" :class="{'is-invalid': hatalar.adSoyad}" id="adSoyad" name="adSoyad" v-model="adSoyad" placeholder="Adınızı ve soyadınızı giriniz">
+                        <div class="invalid-feedback" v-if="hatalar.adSoyad">
+                            {{ hatalar.adSoyad }}
+                        </div>
                     </div>
+                
                     <div class="mb-3">
                         <label for="email" class="form-label">E-Posta</label>
-                        <input type="email" class="form-control" id="email" name="email" v-model="email" placeholder="E-posta adresinizi giriniz">
+                        <input type="email" class="form-control" :class="{'is-invalid': hatalar.email}" id="email" name="email" v-model="email" placeholder="E-posta adresinizi giriniz">
+                        <div class="invalid-feedback" v-if="hatalar.email">
+                            {{ hatalar.email }}
+                        </div>
                     </div>
+                
                     <div class="mb-3">
                         <label for="telefon" class="form-label">Telefon</label>
-                        <input type="tel" class="form-control" id="telefon" name="telefon" v-model="telefon" placeholder="Telefon numaranızı giriniz">
+                        <input type="tel" class="form-control" :class="{'is-invalid': hatalar.telefon}" id="telefon" name="telefon" v-model="telefon" placeholder="Telefon numaranızı giriniz">
+                        <div class="invalid-feedback" v-if="hatalar.telefon">
+                            {{ hatalar.telefon }}
+                        </div>
                     </div>
+                
                     <div class="mb-3">
                         <label class="form-label">Cinsiyet</label><br>
-                        <input type="radio" name="cinsiyet" id="erkek" value="Erkek" v-model="cinsiyet"> 
-                        <label for="erkek" class="px-1">Erkek</label>
-                        <input type="radio" name="cinsiyet" id="kadin" value="Kadın" v-model="cinsiyet">
-                        <label for="kadin" class="px-1">Kadın</label>
+                        <div :class="{'is-invalid': hatalar.cinsiyet}">
+                            <input type="radio" name="cinsiyet" id="erkek" value="Erkek" v-model="cinsiyet"> 
+                            <label for="erkek" class="px-1">Erkek</label>
+                            <input type="radio" name="cinsiyet" id="kadin" value="Kadın" v-model="cinsiyet">
+                            <label for="kadin" class="px-1">Kadın</label>
+                        </div>
+                        <div class="invalid-feedback" v-if="hatalar.cinsiyet">
+                            {{ hatalar.cinsiyet }}
+                        </div>
                     </div>
+                
                     <div class="mb-3">
                         <label for="yas" class="form-label">Yaş</label>
-                        <input type="number" class="form-control" id="yas" name="yas" v-model="yas" placeholder="Yaşınızı giriniz">
+                        <input type="number" class="form-control" :class="{'is-invalid': hatalar.yas}" id="yas" name="yas" v-model="yas" placeholder="Yaşınızı giriniz">
+                        <div class="invalid-feedback" v-if="hatalar.yas">
+                            {{ hatalar.yas }}
+                        </div>
                     </div>
+                
                     <div class="mb-3">
                         <label for="sehir" class="form-label">Şehir</label>
-                        <select class="form-select" id="sehir" name="sehir" v-model="sehir">
+                        <select class="form-select" :class="{'is-invalid': hatalar.sehir}" id="sehir" name="sehir" v-model="sehir">
                             <option value="">Şehir seçiniz</option>
                             <option value="Adana">Adana</option>
                             <option value="Adıyaman">Adıyaman</option>
@@ -143,22 +165,48 @@
                             <option value="Osmaniye">Osmaniye</option>
                             <option value="Düzce">Düzce</option>
                         </select>
+                        <div class="invalid-feedback" v-if="hatalar.sehir">
+                            {{ hatalar.sehir }}
+                        </div>
                     </div>
+                
+                    <div class="mb-3">
+                        <label for="dosya" class="form-label">Dosya</label>
+                        <input type="file" class="form-control" :class="{'is-invalid': hatalar.dosya}" id="dosya" name="dosya" @change="dosyaSecildi">
+                        <div class="invalid-feedback" v-if="hatalar.dosya">
+                            {{ hatalar.dosya }}
+                        </div>
+                    </div>
+                
                     <div class="mb-3">
                         <label for="konu" class="form-label">Konu</label>
-                        <input type="text" class="form-control" id="konu" name="konu" v-model="konu" placeholder="Konuyu giriniz">
+                        <input type="text" class="form-control" :class="{'is-invalid': hatalar.konu}" id="konu" name="konu" v-model="konu" placeholder="Konuyu giriniz">
+                        <div class="invalid-feedback" v-if="hatalar.konu">
+                            {{ hatalar.konu }}
+                        </div>
                     </div>
+                
                     <div class="mb-3">
                         <label for="mesaj" class="form-label">Mesaj</label>
-                        <textarea class="form-control" id="mesaj" name="mesaj" v-model="mesaj" rows="4" placeholder="Mesajınızı giriniz"></textarea>
+                        <textarea class="form-control" :class="{'is-invalid': hatalar.mesaj}" id="mesaj" name="mesaj" v-model="mesaj" rows="4" placeholder="Mesajınızı giriniz"></textarea>
+                        <div class="invalid-feedback" v-if="hatalar.mesaj">
+                            {{ hatalar.mesaj }}
+                        </div>
                     </div>
+                
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="onay" name="onay" v-model="onay">
-                        <label class="form-check-label" for="onay">Verilerimin işlenmesini kabul ediyorum.</label>
+                        <div :class="{'is-invalid': hatalar.onay}">
+                            <input type="checkbox" class="form-check-input" id="onay" name="onay" v-model="onay">
+                            <label class="form-check-label" for="onay">Verilerimin işlenmesini kabul ediyorum.</label>
+                        </div>
+                        <div class="invalid-feedback" v-if="hatalar.onay">
+                            {{ hatalar.onay }}
+                        </div>
                     </div>
+                
                     <button type="button" @click="kontrolEt" class="btn btn-primary m-1">VueJS ile Kontrol Et</button>
                     <button type="button" onclick="kontrolEt()" class="btn btn-warning m-1">JS İle Kontrol Et</button>
-                    <button type="submit" id="gonderBtn" class="btn btn-success m-1" onclick="return gonder()" @click.prevent="formuGonder">Gönder</button>
+                    <button type="submit" id="gonderBtn" class="btn btn-success m-1" @click.prevent="formuGonder" onclick="return gonder()">Gönder</button>
                     <button type="reset" class="btn btn-danger m-1" @click="formuTemizle">Temizle</button>
                 </form>
             </div>
