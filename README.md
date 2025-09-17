@@ -31,8 +31,3 @@ Projenin amacı, HTML, CSS, Bootstrap ve JavaScript teknolojileri kullanılarak 
 ## Hosting
 
 - Proje tamamlandığında ücretsiz bir hosting servisine yüklenerek internet ortamında erişilebilir olacaktır.
-
-## Teslim
-
-- Proje kodları, belgeleri ve raporu zamanında SABİS sistemine yüklenecektir.
-- Proje ayrıca ilgili derste sunulacaktır.
