@@ -20,7 +20,7 @@ Projenin amacı, HTML, CSS, Bootstrap ve JavaScript teknolojileri kullanılarak 
 - **Bootstrap**
 - **JavaScript**
 - **PHP** (Login işlemleri için)
-- **Vue.js** veya benzeri bir JS kütüphanesi (İletişim formu doğrulaması için)
+- **Vue.js** (İletişim formu doğrulaması için)
 
 ## Proje Gelişim Süreci
 
