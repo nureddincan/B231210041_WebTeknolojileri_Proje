@@ -11,7 +11,7 @@ Projenin amacı, HTML, CSS, Bootstrap ve JavaScript teknolojileri kullanılarak 
 - **Mirasımız/Takımımız Sayfası:** Şehrime ait kültürel bir eser ya da spor takımı hakkında bilgiler verilen bir sayfa.
 - **İlgi Alanlarım Sayfası:** İlgi alanlarım doğrultusunda bir ücretsiz API kullanılarak veri çekilen bir sayfa (film, spor vb.).
 - **Login Sayfası:** Kullanıcı adı ve şifre ile giriş yapılan, PHP ile kontrol işlemleri yapılan bir login sistemi.
-- **İletişim Sayfası:** Form elemanları ile hazırlanmış, JavaScript ve bir popüler JS kütüphanesi (Vue.js, Angular.js vb.) kullanılarak doğrulama yapılan bir iletişim formu.
+- **İletişim Sayfası:** Form elemanları ile hazırlanmış, JavaScript ve bir popüler JS kütüphanesi (Vue.js) kullanılarak doğrulama yapılan bir iletişim formu.
 
 ## Kullanılan Teknolojiler
 
