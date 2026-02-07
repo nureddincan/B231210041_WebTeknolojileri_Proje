@@ -68,7 +68,7 @@ HTML, CSS, Bootstrap ve JavaScript teknolojileri kullanılarak tasarladığım; 
 
 ---------------
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/30467f82-3626-427e-97ae-9f2836defc78" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/adf89b48-7dcd-4162-9783-859e4633d1ed" />
 
 ---------------
 
@@ -76,7 +76,7 @@ HTML, CSS, Bootstrap ve JavaScript teknolojileri kullanılarak tasarladığım; 
 
 ---------------
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/adf89b48-7dcd-4162-9783-859e4633d1ed" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/30467f82-3626-427e-97ae-9f2836defc78" />
 
 ---------------
 
@@ -92,7 +92,4 @@ HTML, CSS, Bootstrap ve JavaScript teknolojileri kullanılarak tasarladığım; 
 
 ---------------
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1e41b694-877c-4edf-a3d0-e02813556423" />
-
-
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/32a4aa44-6075-4810-be3e-d58e4691d834" />
